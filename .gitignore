@@ -1,0 +1,49 @@
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Django
+*.sqlite3
+db.sqlite3
+/media/
+*.log
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Configurações locais e variáveis sensíveis
+*.env
+*.secret
+config/settings_local.py
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Arquivos de compilação
+*.egg-info/
+*.eggs/
+dist/
+build/
+
+# Migrations
+*/migrations/*.py
+!*/migrations/__init__.py
+
+# Node modules (caso esteja usando front-end com Node.js)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Outros arquivos temporários
+*.tmp
+*.swp
+*.bak
