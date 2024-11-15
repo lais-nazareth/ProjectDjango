@@ -10,23 +10,28 @@
 
     <title>cadastro</title>
   </head>
-  <body>
-    <nav style ="background-color: aquamarine !important;" class="navbar navbar-light bg-light">
-      <div class="container-fluid">
-        <span class="navbar-brand mb-0 h1">Cadastre-me</span>
-      </div>
-    </nav>
-    <form action="{%url 'listagem_usuarios'%}" method = "post">
-      {% csrf_token %}
-      <div style="text-align: center;" class="Container">
-        <h1>Cadastro de Usuários</h1>
-        Nome: <input name="nome" class="form-control-sm" type="text">
-        Idade: <input name="idade" class="form-control-sm" type="text">
-        <button class="form-control-sm">Enviar</button>
-      </div>
-    </form>
-    
 
+<body>
+
+<div class="container">
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>id</th>
+            <th>nome</th>
+            <th>idade</th>
+
+        </tr>
+        {% for usuario in usuarios %}
+        <tr>
+            <td>{{usuario.id_usuario}}</td>
+            <td>{{usuario.nome}}</td>
+            <td>{{usuario.idade}}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
